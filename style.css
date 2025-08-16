@@ -207,6 +207,7 @@ input {
     background: #0077B6;
     color: white;
     font-weight: 500;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26);
 }
 
 .main-content {
@@ -244,6 +245,7 @@ input {
     grid-template-rows: 1fr 2fr 1fr;
     height: min(25vh, 50vh);
     gap: 0.5rem;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26);
 }
 
 .project-card-header {
@@ -276,6 +278,7 @@ input {
     padding: 1rem;
     gap: 1rem;
     border-radius: 1rem;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26);
 }
 
 .aanouncement-text {
@@ -302,6 +305,7 @@ input {
     border-radius: 1rem;
     gap: 2rem;
     /* place-items: center; */
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.26);
 }
 
 .trending-content {
