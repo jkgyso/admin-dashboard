@@ -1,0 +1,332 @@
+:root {
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-primary: "Rubik", "Montserrat", sans-serif, var(--system-ui);
+  --sidebar-header: clamp(1rem, 2vw, 1.5rem);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-primary);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Sidebar header icon */
+.sidebar-header-icon {
+    width: min(3rem, 5vw);
+}
+/* Sidebar container icons */
+.sidebar-container-icon {
+    width: min(2rem, 3vw)
+}
+
+/* Main header icons */
+.main-header-icon {
+    width: min(2rem, 5vw);
+    fill: #0077B6;
+}
+
+/* Project Card icons */
+
+.project-card-icon {
+    width: min(1.5rem, 3vw);
+    fill: #004e89;
+}
+
+/* Sidebar Container */
+#sidebar {
+    /* border: 2px solid black; */
+    background: linear-gradient(180deg in srgb-linear, #09203Fff 10%, #537895ff 100%);
+    color: white;
+}
+
+#sidebar svg {
+    fill: white;
+}
+
+.sidebar-header-text {
+    font-size: var(--sidebar-header);
+    font-weight: 600;
+}
+
+.sidebar-header, .sidebar-container-1-item, .sidebar-container-2-item {
+    padding: 1rem;
+    display: grid; 
+    grid-template-columns: minmax(50px, 1fr) minmax(100px, 2fr);
+    align-items: center;
+}
+
+.sidebar-header-icon, .sidebar-container-icon {
+    justify-self: center;
+}
+
+.sidebar-container-1, .sidebar-container-2 {
+    /* border: 2px solisd black; */
+    margin-top: 2rem;
+}
+
+#main {
+    display: grid; 
+    grid-template-rows: auto 1fr;
+}
+
+.main-header {
+    padding: 1.5rem 2rem;
+    display: flex; 
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.main-top-header {
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) minmax(100px, 1fr);
+        /* border: 2px solid black; */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-top-left-header {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input {
+    width: min(500px, 70vw);
+    max-height: 35px;
+    border-radius: 1rem;
+    padding: 0.5rem 1.2rem;
+    border: 2px solid #0077B6;
+    background: #F0F8FF;
+}
+
+.main-top-right-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: end;
+}
+
+.main-top-right-header img {
+    vertical-align: middle;
+    width: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-top-header-text {
+    font-weight: 700;
+}
+
+.main-bottom-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0.5rem;
+}
+
+.main-bottom-left-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.main-bottom-left-header .top-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.main-bottom-left-header .bottom-text {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 600;
+}
+
+.main-bottom-left-header img {
+    vertical-align: middle;
+    width: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-bottom-right-header {
+    display: flex; 
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.main-bottom-right-header button {
+    padding: 0.2rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    background: #0077B6;
+    color: white;
+    font-weight: 500;
+}
+
+.main-content {
+    background: #FBF8FB;
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+/* PROJECTS */
+
+.main-projects, .main-ads-announcements, .main-ads-trending {
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem;
+}
+
+.main-text {
+    font-size: clamp(1rem, 1.8vw, 2rem)
+}
+
+.main-project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border-left: 6px solid #1EC9B8;
+    display: grid; 
+    grid-template-rows: 1fr 2fr 1fr;
+    height: min(25vh, 50vh);
+    gap: 0.5rem;
+}
+
+.project-card-header {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.project-card-description {
+    font-size: 0.8rem;
+}
+
+.project-card-icons {
+    display: flex; 
+    justify-content: end;
+    gap: 0.8rem
+}
+
+.main-ads {
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem;
+}
+
+/* ANNOUNCEMENTS */
+
+.announcements-card {
+    display: grid; 
+    grid-template-rows: repeat(3, 1fr);
+    background: #EBEBEB;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+
+.aanouncement-text {
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.5rem;
+}
+
+.announcement-header{
+    font-size: clamp(0.7rem, 0.8vw, 1rem);
+    font-weight: 600;
+}
+
+.announcement-description, .trending-description {
+    font-size: 0.7rem;
+}
+
+/* TRENDING */
+
+.main-trending-card {
+    background: #EBEBEB;
+    display: grid;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 2rem;
+    /* place-items: center; */
+}
+
+.trending-content {
+    display: grid; 
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+.trending-content img {
+    vertical-align: middle;
+    width: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    height: 60px;
+    border-radius: 50vw;
+    object-fit: cover;
+    justify-self: center;
+}
+
+.trending-handle {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.trending-text {
+    justify-self: start;
+    font-size: 0.7rem;
+}
